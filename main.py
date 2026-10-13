@@ -1,8 +1,9 @@
 import os
+import datetime  
 import users
 import filesystem
 import processes
-import memory  # Connects the memory management module
+import memory
 
 def clear_screen():
     os.system('cls' if os.name == 'nt' else 'clear')
@@ -10,6 +11,7 @@ def clear_screen():
 def show_help():
     print("\nAvailable Commands:")
     print("  help       - Show available commands")
+    print("  time       - Show current system time")
     print("  clear      - Clear the screen")
     print("  whoami     - Show current logged-in user")
     print("  systeminfo - Show system information")
@@ -38,10 +40,13 @@ def main():
                 
             command = user_input[0].lower()
             
-            # --- COMMAND ROUTER ---
+            #COMMAND ROUTER
             if command == "exit":
                 print("Shutting down MiniOS...\nGoodbye!")
                 break
+            elif command == "time":
+                current_time = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+                print(f"System Time: {current_time}")
             elif command == "help":
                 show_help()
             elif command == "clear":
@@ -58,7 +63,7 @@ def main():
                 print(f"Current User: {users.current_user}")
                 print("========================================\n")
                 
-            # --- FILE MANAGEMENT ---
+            #FILE MANAGEMENT
             elif command == "dir":
                 filesystem.list_directory()
             elif command == "mkdir":
@@ -81,8 +86,9 @@ def main():
                     filesystem.delete_file(user_input[1])
                 else:
                     print("Error: Missing file name.")
+                 
                     
-            # --- PROCESS MANAGEMENT ---
+            #PROCESS MANAGEMENT
             elif command == "process":
                 processes.list_processes()
             elif command == "run":
@@ -95,8 +101,9 @@ def main():
                     processes.kill_process(user_input[1])
                 else:
                     print("Error: Missing PID.")
+
                     
-            # --- MEMORY MANAGEMENT ---
+            #MEMORY MANAGEMENT
             elif command == "memory":
                 memory.show_memory()
             elif command == "allocate":
