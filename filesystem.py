@@ -28,7 +28,7 @@ def create_file(filename):
     if filename in files:
         print(f"\nError: File '{filename}' already exists.\n")
     else:
-        # We will add default text to match your professor's rubric example
+        
         files[filename] = "Operating Systems Final Project"
         print("\nFile created.\n")
 

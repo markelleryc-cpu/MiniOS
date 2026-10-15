@@ -1,6 +1,4 @@
-# processes.py
 
-# Dictionary to store running processes. Key: PID, Value: Process Details
 running_processes = {}
 next_pid = 1
 

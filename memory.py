@@ -1,7 +1,7 @@
-# memory.py
+
 
 total_memory = 1024
-used_memory = 0  # Starts at 0 MB used
+used_memory = 0  
 
 def show_memory():
     free_memory = total_memory - used_memory

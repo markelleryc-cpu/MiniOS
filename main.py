@@ -26,15 +26,22 @@ def show_help():
     print("  memory     - Show memory status")
     print("  allocate   - Allocate memory (Usage: allocate <MB>)")
     print("  free       - Release memory (Usage: free <MB>)")
-    print("  exit       - Shut down MiniOS\n")
+    print("  exit       - Shut down MiniOSNova\n")
 
 def main():
     clear_screen()
     users.login_system()
     
+    # 1. The New Banner
+    print("========================================")
+    print("  SureballNa | MiniOSNova v1.0 | IT3131 ")
+    print("========================================")
+    print("\nWelcome to MiniOSNova!")
+    
     while True:
         try:
-            user_input = input("MiniOS> ").strip().split()
+            # This line changes the actual typing prompt
+            user_input = input("\nMiniOSNova> ").strip().split()
             if not user_input:
                 continue
                 
@@ -42,7 +49,7 @@ def main():
             
             #COMMAND ROUTER
             if command == "exit":
-                print("Shutting down MiniOS...\nGoodbye!")
+                print("Shutting down MiniOSNova...\nGoodbye!")
                 break
             elif command == "time":
                 current_time = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
@@ -57,7 +64,7 @@ def main():
                 print("\n========================================")
                 print("          SYSTEM INFORMATION")
                 print("========================================")
-                print("OS Name: MiniOS Alpha (Simulated)")
+                print("OS Name: MiniOSNova (Simulated)")
                 print("Version: 1.0")
                 print("Architecture: 64-bit Virtual")
                 print(f"Current User: {users.current_user}")
@@ -116,7 +123,7 @@ def main():
                     memory.free_allocated_memory(user_input[1])
                 else:
                     print("Error: Missing amount. Usage: free <MB>")
-                    
+                
             else:
                 print(f"Unknown command: '{command}'. Type 'help' to see the available commands.")
                 
