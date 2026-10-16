@@ -7,7 +7,6 @@ def show_memory():
     free_memory = total_memory - used_memory
     print("\nMemory Status")
     print("-" * 24)
-    # The :>4 aligns the numbers to the right so they look like a clean column
     print(f"Total Memory: {total_memory:>4} MB")
     print(f"Used Memory:  {used_memory:>4} MB")
     print(f"Free Memory:  {free_memory:>4} MB\n")

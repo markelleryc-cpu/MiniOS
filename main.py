@@ -40,7 +40,7 @@ def main():
     
     while True:
         try:
-            # This line changes the actual typing prompt
+            
             user_input = input("\nMiniOSNova> ").strip().split()
             if not user_input:
                 continue

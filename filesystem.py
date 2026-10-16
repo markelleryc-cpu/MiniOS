@@ -1,9 +1,9 @@
-# filesystem.py
 
-# A list to store folder names
+
+
 directories = []
 
-# A dictionary to store files (Key: filename, Value: file content)
+
 files = {}
 
 def list_directory():
