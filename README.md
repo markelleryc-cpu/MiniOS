@@ -3,39 +3,35 @@
 **Operating Systems Final Project**
 
 ## Group Members
-1. [Your Name] - Project Leader + CLI
-2. [Member 2 Name] - File Management
-3. [Member 3 Name] - Process & Memory Management
-4. [Member 4 Name] - User Management, System Info & Testing
+1. Mark Ellery Contreras - Project Leader
+2. 
+3. 
+4. 
 
 ## Project Description
-MiniOS is a command-line operating system simulator built in Python. It runs directly through the Windows Command Prompt (CMD) and simulates core OS concepts including a file system, background processes, memory allocation, and user authentication.
+**MiniOSNova** is a lightweight, simulated command-line operating system developed in Python. Running directly through the Windows Command Prompt (CMD) or terminal, it simulates how an operating system manages core tasks behind the scenes without requiring hardware-level changes. Users can log in through a secure authentication gateway, manage virtual files and directories, start and terminate simulated background processes, and allocate or free virtual system memory.
+
+---
 
 ## Features
-- Command-line interface with persistent shell
-- Simulated File Management (create, read, delete directories and files)
-- Simulated Process Management (run and kill background tasks via PID)
-- Simulated Memory Management (allocate and free virtual RAM)
-- User Authentication (admin/student login system)
-- System Information and Hardware Simulation
-- Robust Error Handling for invalid commands and parameters
+* **Command-Line Interface (CLI):** Custom `MiniOSNova>` command shell that parses user commands and routes tasks to specialized system modules.
+* **User Management:** Secure login prompt with hidden password keystrokes and active user tracking.
+* **File System Management:** Virtual in-memory file system using Python lists and dictionaries to create, view, read, and delete directories and files.
+* **Process Management Simulation:** Starts and terminates simulated applications while assigning unique, incremental Process IDs (PIDs).
+* **Memory Management Simulation:** Tracks total, allocated, and free system RAM in Megabytes (MB).
+* **System Information:** Displays simulated OS details, version, virtual architecture, and the currently logged-in user.
+* **Error Handling:** Catches unknown commands, missing arguments, invalid file/PID targets, and `Ctrl+C` keyboard interrupts without crashing.
+
+---
 
 ## Requirements
-- Python 3.x
-- Windows CMD (or standard terminal)
+* **Python 3.x**
+* **Windows Command Prompt (CMD)**, PowerShell, or VS Code Terminal
+* No external third-party libraries are required (uses Python standard libraries).
+
+---
 
 ## How to Run
-1. Clone this repository to your local machine.
-2. Open Windows Command Prompt (CMD) or your IDE terminal.
-3. Navigate to the project folder.
-4. Run the following command:
-   `python main.py`
-5. Login using default credentials (Username: `admin` / Password: `admin123`).
-
-## Available Commands
-| Category | Commands |
-|----------|----------|
-| **General** | `help`, `clear`, `whoami`, `systeminfo`, `exit` |
-| **Files** | `dir`, `mkdir <name>`, `create <name>`, `read <name>`, `delete <name>` |
-| **Processes** | `process`, `run <name>`, `kill <pid>` |
-| **Memory** | `memory`, `allocate <MB>`, `free <MB>` |
+1. Clone the repository to your computer:
+   ```bash
+   git clone [https://github.com/markelleryc-cpu/MiniOSNova.git](https://github.com/markelleryc-cpu/MiniOSNova.git)
